@@ -43,7 +43,7 @@ app.get('/users/:id', async(req, res) => {
   }
 });
 
-//update user
+//update one user
 app.put('/users/:id', async(req, res) => {
   try {
     const { id } = req.params;
@@ -55,7 +55,7 @@ app.put('/users/:id', async(req, res) => {
   }
 });
 
-//delete user
+//delete one user
 app.delete('/users/:id', async(req, res) => {
   try {
     const { id } = req.params;
