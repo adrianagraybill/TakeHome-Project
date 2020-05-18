@@ -14,8 +14,8 @@ app.use(express.json());
 //create user
 app.post('/users', async(req, res) => {
   try {
-    const { user_name, user_email } = req.body;
-    const newUser = await pool.query("INSERT INTO users (user_name, user_email) VALUES($1, $2) RETURNING *", [ user_name, user_email ]);
+    const { user_name, user_email, user_phone } = req.body;
+    const newUser = await pool.query("INSERT INTO users (user_name, user_email, user_phone) VALUES($1, $2, $3) RETURNING *", [ user_name, user_email, user_phone ]);
     res.json(newUser.rows[0]);
   } catch (err) {
     console.error(err.message);
@@ -47,8 +47,8 @@ app.get('/users/:id', async(req, res) => {
 app.put('/users/:id', async(req, res) => {
   try {
     const { id } = req.params;
-    const { user_name, user_email } = req.body;
-    const updateUser = await pool.query("UPDATE users SET (user_name, user_email) = ($1, $2) WHERE user_id = $3", [ user_name, user_email, id]);
+    const { user_name, user_email, user_phone } = req.body;
+    const updateUser = await pool.query("UPDATE users SET (user_name, user_email, user_phone) = ($1, $2, $3) WHERE user_id = $4", [ user_name, user_email, user_phone, id]);
     res.json("User has been updated.");
   } catch (err) {
     console.error(err.message);
