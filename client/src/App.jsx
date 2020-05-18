@@ -3,6 +3,7 @@ import './App.scss';
 
 //COMPONENTS
 import NewUser from './components/newUser';
+import ListUsers from './components/listUsers';
 
 
 function App() {
