@@ -1,0 +1,23 @@
+table {
+  width: 70%;
+  margin: 0 auto;
+}
+
+#headerRow {
+  font-weight: bold;
+}
+
+.tdWide {
+  padding-right: 12%;
+}
+
+tr {
+  border-bottom: .5px solid lightgrey;
+  text-align: center;
+  font-size: 18px;
+}
+
+td {
+  height: 40px;
+  vertical-align: middle;
+}
