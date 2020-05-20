@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react';
-import "./newUser.scss";
+import './newUser.scss';
 
 const NewUser = () => {
 
@@ -30,16 +30,19 @@ const NewUser = () => {
     <h1>Users Database</h1>
     <form onSubmit={onFormSubmit}>
       <input
+        placeholder="Name"
         type="text"
         value={user_name}
         onChange={e => setUserName(e.target.value)}
         />
       <input
+        placeholder="Email"
         type="text"
         value={user_email}
         onChange={e => setUserEmail(e.target.value)}
         />
       <input
+        placeholder="Phone Number"
         type="text"
         value={user_phone}
         onChange={e => setUserPhone(e.target.value)}

@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import './reset.scss';
 import './App.scss';
 
 //COMPONENTS
@@ -11,6 +12,7 @@ function App() {
     <Fragment>
       <div>
         <NewUser />
+        <ListUsers />
       </div>
     </Fragment>
   );
