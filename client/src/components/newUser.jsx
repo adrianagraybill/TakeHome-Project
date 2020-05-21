@@ -19,6 +19,7 @@ const NewUser = () => {
 
       //refresh page
       window.location = "/";
+      window.location = "/";
       
     } catch (err) {
       console.error(err.message);
@@ -47,7 +48,7 @@ const NewUser = () => {
         value={user_phone}
         onChange={e => setUserPhone(e.target.value)}
         />
-      <button>Add</button>
+      <button id="addUserBtn">Add</button>
     </form>
   </Fragment>
   )

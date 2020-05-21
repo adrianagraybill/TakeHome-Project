@@ -20,15 +20,22 @@ input {
 
 button {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: lightblue;
-  padding: 10px 25px;
+  width: 60px;
+  padding: 10px 0px;
   border-radius: 4px;
   border: none;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 button:hover {
   transition-delay: .2s;
-  background-color: gray;
-  color: lightblue;
+}
+
+#addUserBtn {
+  background-color: lightblue;
+}
+
+#addUserBtn:hover {
+  background-color: rgb(97, 97, 97);
+  color: white;
 }
