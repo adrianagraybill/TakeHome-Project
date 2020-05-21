@@ -1,5 +1,5 @@
 table {
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -8,7 +8,11 @@ table {
 }
 
 .tdWide {
-  padding-right: 12%;
+  padding-right: 10%;
+}
+
+.tdNarrow {
+  padding-right: 5%;
 }
 
 tr {
@@ -20,4 +24,24 @@ tr {
 td {
   height: 40px;
   vertical-align: middle;
+}
+
+#editBtn {
+  background-color: rgb(152, 240, 152);
+  color: rgb(99, 99, 99);
+}
+
+#editBtn:hover {
+  background-color: rgb(99, 99, 99);
+  color: rgb(152, 240, 152);
+}
+
+#deleteBtn {
+  background-color: rgb(253, 94, 94);
+  color: rgb(63, 63, 63);
+}
+
+#deleteBtn:hover {
+  background-color: rgb(63, 63, 63);
+  color: rgb(253, 94, 94);
 }
