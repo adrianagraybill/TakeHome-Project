@@ -1,6 +1,8 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import './listUsers.scss'
 
+import EditUser from './editUser';
+
 const ListUsers = () => {
 
   const [users, setUsers] = useState([]);
@@ -8,7 +10,7 @@ const ListUsers = () => {
   const deleteUser = async id => {
     try {
       const deleteUser = await fetch(`http://localhost:8000/users/${id}`, {
-      method: "DELETE"
+        method: "DELETE"
       });
       setUsers(users.filter(user => user.user_id !== id));
     } catch (err) {
@@ -49,10 +51,7 @@ const ListUsers = () => {
             <td class="tdWide">{users.user_email}</td>
             <td class="tdWide">{users.user_phone}</td>
             <td>
-              <button 
-                class="btn"
-                id="editBtn">Edit
-              </button>
+              <EditUser users={users}/>
             </td>
             <td>
               <button 

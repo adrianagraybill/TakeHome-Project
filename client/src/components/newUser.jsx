@@ -10,7 +10,7 @@ const NewUser = () => {
   const onFormSubmit = async(e) => {
     e.preventDefault();
     try {
-      const body = {user_name, user_email, user_phone}
+      const body = { user_name, user_email, user_phone }
       const response = fetch("http://localhost:8000/users", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -30,18 +30,21 @@ const NewUser = () => {
     <h1>Users Database</h1>
     <form onSubmit={onFormSubmit}>
       <input
+        class="newUserInput"
         placeholder="Name"
         type="text"
         value={user_name}
         onChange={e => setUserName(e.target.value)}
         />
       <input
+        class="newUserInput"
         placeholder="Email"
         type="text"
         value={user_email}
         onChange={e => setUserEmail(e.target.value)}
         />
       <input
+        class="newUserInput"
         placeholder="Phone Number"
         type="text"
         value={user_phone}
