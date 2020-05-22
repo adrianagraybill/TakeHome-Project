@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react';
+import './editUser.scss'
 
 const EditUser = ({ users }) => {
 
@@ -47,24 +48,30 @@ const EditUser = ({ users }) => {
                 type="button"
                 class="close"
                 data-dismiss="modal"
+                onClick={() => {
+                  setUserName(users.user_name)
+                  setUserEmail(users.user_email)
+                  setUserPhone(users.user_phone)
+                  }
+                }
               >
                 &times;
               </button>
             </div>
             <div class="modal-body">
-              <input
+              Name <input
                 class="form-control"
                 type="text"
                 value={user_name}
                 onChange={e => setUserName(e.target.value)}
               />
-              <input
+              Email <input
                 class="form-control"
                 type="text"
                 value={user_email}
                 onChange={e => setUserEmail(e.target.value)}
               />
-              <input
+              Phone Number <input
                 class="form-control"
                 type="text"
                 value={user_phone}

@@ -27,7 +27,7 @@ const NewUser = () => {
 
   return (
   <Fragment>
-    <h1>Users Database</h1>
+    <h1 id="header">Contact Database</h1>
     <form onSubmit={onFormSubmit}>
       <input
         class="newUserInput"

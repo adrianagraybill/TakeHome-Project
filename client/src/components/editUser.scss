@@ -1,10 +1,34 @@
-.modalInput {
-  width: 30%;
-  height: 40px;
-  margin: 30px 15px;
-  border: .5px solid rgb(184, 184, 184);
-  border-radius: 3px;
-  font-size: 14px;
-  padding-left: 7px;
-  background-color: rgb(242, 247, 248);
+.form-control {
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+.modal-dialog {
+  margin-top: 10%;
+}
+
+.modal-content, .modal-header, .modal-dialog, .modal-body, .modal-footer {
+  background-color: rgb(54, 54, 54);
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+.modal-title {
+  font-size: 22px;
+  border-bottom: solid .5px white;
+  margin-bottom: 20px;
+}
+
+.modal-body {
+  font-size: 16px;
+}
+
+.close {
+  color: white;
+}
+
+.close:hover {
+  color: lightgoldenrodyellow;
+  transition-delay: .1s;
 }
