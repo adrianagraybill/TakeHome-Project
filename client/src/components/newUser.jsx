@@ -28,23 +28,23 @@ const NewUser = () => {
   return (
   <Fragment>
     <h1 id="header">Contact Database</h1>
-    <form onSubmit={onFormSubmit}>
+    <form className="newUserForm" onSubmit={onFormSubmit}>
       <input
-        class="newUserInput"
+        className="newUserInput"
         placeholder="Name"
         type="text"
         value={user_name}
         onChange={e => setUserName(e.target.value)}
         />
       <input
-        class="newUserInput"
+        className="newUserInput"
         placeholder="Email"
         type="text"
         value={user_email}
         onChange={e => setUserEmail(e.target.value)}
         />
       <input
-        class="newUserInput"
+        className="newUserInput"
         placeholder="Phone Number"
         type="text"
         value={user_phone}
