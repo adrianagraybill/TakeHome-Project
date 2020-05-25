@@ -27,11 +27,11 @@ const EditUser = ({ users }) => {
 
   return <Fragment>
     <div
-      class="container"
+      className="container"
     >
       <button
         type="button"
-        class="btn"
+        className="btn"
         id="editBtn"
         data-toggle="modal"
         data-target={`#id${users.user_id}`}
@@ -39,14 +39,14 @@ const EditUser = ({ users }) => {
         Edit
       </button>
 
-      <div class="modal fade" id={`id${users.user_id}`} role="dialog">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Edit Contact Information</h4>
+      <div className="modal fade" id={`id${users.user_id}`} role="dialog">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h4 className="modal-title">Edit Contact Information</h4>
               <button
                 type="button"
-                class="close"
+                className="close"
                 data-dismiss="modal"
                 onClick={() => {
                   setUserName(users.user_name)
@@ -58,27 +58,27 @@ const EditUser = ({ users }) => {
                 &times;
               </button>
             </div>
-            <div class="modal-body">
+            <div className="modal-body">
               Name <input
-                class="form-control"
+                className="form-control"
                 type="text"
                 value={user_name}
                 onChange={e => setUserName(e.target.value)}
               />
               Email <input
-                class="form-control"
+                className="form-control"
                 type="text"
                 value={user_email}
                 onChange={e => setUserEmail(e.target.value)}
               />
               Phone Number <input
-                class="form-control"
+                className="form-control"
                 type="text"
                 value={user_phone}
                 onChange={e => setUserPhone(e.target.value)}
               />
             </div>
-            <div class="modal-footer">
+            <div className="modal-footer">
               <button 
                 type="button"
                 id="editBtn"
