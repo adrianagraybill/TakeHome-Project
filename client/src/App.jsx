@@ -22,7 +22,7 @@ function App() {
 
   return (
     <Fragment>
-      <div>
+      <div className="container">
         <Router>
             <Switch>
               <Route
@@ -48,6 +48,7 @@ function App() {
               />
             </Switch>
         </Router>
+
         {/* <NewUser />
         <ListUsers /> */}
       </div>
