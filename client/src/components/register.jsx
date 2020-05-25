@@ -1,7 +1,8 @@
 import React, { Fragment, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './register.scss';
 
-const Register = () => {
+const Register = ({ setAuth }) => {
 
   const [inputs, setInputs] = useState({
     user_name: "",
@@ -28,7 +29,10 @@ const Register = () => {
         body: JSON.stringify(body)
       });
       const parsedResponse = await response.json();
-      console.log(parsedResponse)
+      
+      localStorage.setItem("token", parsedResponse.token);
+
+      setAuth(true);
     } catch (err) {
       console.error(err.message);
     }
@@ -64,6 +68,7 @@ const Register = () => {
         />
         <button id="registerButton">Submit</button>
       </form>
+      <Link to="/register" className="linkTo">Register</Link>
     </Fragment>
   )
 }
