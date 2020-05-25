@@ -11,6 +11,9 @@ app.use(express.json());
 
 //ROUTES
 
+//register and login
+app.use("/auth", require("./routes/jwtAuth.js"));
+
 //create user
 app.post('/users', async(req, res) => {
   try {
