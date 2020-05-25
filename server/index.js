@@ -5,16 +5,19 @@ const app = express();
 const cors = require('cors');
 const pool = require('./db.js');
 
-//MIDDLEWARE
+// MIDDLEWARE
 app.use(cors());
 app.use(express.json()); 
 
-//ROUTES
+// ROUTES
 
-//register and login
+// Register and login
 app.use("/auth", require("./routes/jwtAuth.js"));
 
-//create user
+// Dashboard
+app.use("/dashboard", require("./routes/dashboard.js"));
+
+// Create user
 app.post('/users', async(req, res) => {
   try {
     const { user_name, user_email, user_phone } = req.body;
@@ -25,7 +28,7 @@ app.post('/users', async(req, res) => {
   }
 });
 
-//get all users
+// Get all users
 app.get('/users', async(req, res) => {
   try {
     const allUsers = await pool.query("SELECT * FROM users ORDER BY user_id");
@@ -35,7 +38,7 @@ app.get('/users', async(req, res) => {
   }
 });
 
-//get one user
+// Get one user
 app.get('/users/:id', async(req, res) => {
   try {
     const { id } = req.params;
@@ -46,7 +49,7 @@ app.get('/users/:id', async(req, res) => {
   }
 });
 
-//update one user
+// Update one user
 app.put('/users/:id', async(req, res) => {
   try {
     const { id } = req.params;
@@ -58,7 +61,7 @@ app.put('/users/:id', async(req, res) => {
   }
 });
 
-//delete one user
+// Delete one user
 app.delete('/users/:id', async(req, res) => {
   try {
     const { id } = req.params;

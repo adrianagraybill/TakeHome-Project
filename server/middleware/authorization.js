@@ -10,9 +10,8 @@ module.exports = async (req, res, next) => {
         return res.status(403).send("Unauthorized");
       } 
     const payload = jwt.verify(jwtToken, process.env.secret);
-
     req.account = payload.account;
-
+    next();
   } catch (err) {
     console.error(err.message);
     return res.status(403).send("Unauthorized");
