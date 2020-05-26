@@ -16,9 +16,10 @@ const NewUser = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body)
       });
+      console.log(response);
 
       //refresh page
-      window.location = "/";
+      window.location = "/dashboard";
       
     } catch (err) {
       console.error(err.message);
@@ -27,7 +28,8 @@ const NewUser = () => {
 
   return (
   <Fragment>
-    <h1 id="header">Contact Database</h1>
+
+
     <form className="newUserForm" onSubmit={onFormSubmit}>
       <input
         className="newUserInput"

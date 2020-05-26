@@ -16,10 +16,21 @@ h1, .newUserForm {
   color: white;
 }
 
+#headerH {
+  text-align: center;
+}
+
+#headerButton {
+  float: left;
+  margin-left: 10px;
+  width: 100px;
+  margin-top: 5px;
+}
+
 .newUserInput {
   width: 20%;
   height: 40px;
-  margin: 80px 15px;
+  margin: 80px 0px 80px 20px;
   border: .4px solid rgb(184, 184, 184);
   border-radius: 5px;
   font-size: 14px;
@@ -45,6 +56,7 @@ button:hover {
 }
 
 #addUserBtn {
+  margin-left: 20px;
   background-color: lightblue;
 }
 

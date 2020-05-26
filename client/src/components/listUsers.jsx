@@ -13,6 +13,7 @@ const ListUsers = () => {
         method: "DELETE"
       });
       setUsers(users.filter(user => user.user_id !== id));
+      console.log(deleteUser);
     } catch (err) {
       console.log(err.mesagge);
     }
@@ -37,26 +38,26 @@ const ListUsers = () => {
     <table>
       <thead>
         <tr id="headerRow">
-          <td class="tdWide">Name</td>
-          <td class="tdWide">Email</td>
-          <td class="tdWide">Phone Number</td>
-          <td class="tdNarrow"></td>
-          <td class="tdNarrow"></td>
+          <td className="tdWide">Name</td>
+          <td className="tdWide">Email</td>
+          <td className="tdWide">Phone Number</td>
+          <td className="tdNarrow"></td>
+          <td className="tdNarrow"></td>
         </tr>
       </thead>
       <tbody>
         {users.map(users => (
           <tr key={users.user_id}>
-            <td class="tdWide">{users.user_name}</td>
-            <td class="tdWide">{users.user_email}</td>
-            <td class="tdWide">{users.user_phone}</td>
+            <td className="tdWide">{users.user_name}</td>
+            <td className="tdWide">{users.user_email}</td>
+            <td className="tdWide">{users.user_phone}</td>
             <td>
               <EditUser users={users}/>
             </td>
             <td>
               <button 
-                class="btn" 
-                id="deleteBtn" 
+                className="btn" 
+                id="deleteBtn"
                 onClick={() => deleteUser(users.user_id)}
               > 
                 Delete

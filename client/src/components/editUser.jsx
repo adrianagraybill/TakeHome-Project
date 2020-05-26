@@ -16,9 +16,10 @@ const EditUser = ({ users }) => {
         headers: { "Content-type": "application/json" },
         body: JSON.stringify(body)
       });
+      console.log(response);
 
       //refresh page
-      window.location = "/";
+      window.location = "/dashboard";
 
     } catch (err) {
       console.log(err.message)
