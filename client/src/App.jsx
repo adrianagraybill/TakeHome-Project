@@ -22,7 +22,6 @@ function App() {
 
   return (
     <Fragment>
-      <div className="container">
         <Router>
             <Switch>
               <Route
@@ -51,7 +50,6 @@ function App() {
 
         {/* <NewUser />
         <ListUsers /> */}
-      </div>
     </Fragment>
   );
 }

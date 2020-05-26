@@ -58,8 +58,8 @@ const Login = ({ setAuth }) => {
           onChange={e => onChange(e)}
         />
         <button id="loginButton">Submit</button>
-      </form>
       <Link to="/register">Register</Link>
+      </form>
     </Fragment>
   )
 }
