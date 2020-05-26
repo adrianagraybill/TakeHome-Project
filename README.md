@@ -12,6 +12,7 @@
 * [Todo App Demo](https://www.youtube.com/watch?v=5vF0FGfa0RQ)
 * [JWT Register/Login Demo](https://www.youtube.com/watch?v=7UQBMb8ZpuE)
 * [Bootstrap 4](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
+
 (Used this for just one modal, everything else was designed and styled on my own to be reactive and have a simple, easy to use interface.)
 * [Migration Docs](https://salsita.github.io/node-pg-migrate/#/)
 * [PSQL Command CheatSheet](https://gist.github.com/Kartones/dd3ff5ec5ea238d4c546)
@@ -37,7 +38,7 @@
 * [toastify](https://www.npmjs.com/package/toastify)
 
 ## Setup
-###.env requirements
+### .env requirements
 * Create a .env file at the root of the server file with the following example, the secret can be anything:
 ```secret=enterwhateveryouwouldlikehere```
 * Server PORT - 8000
