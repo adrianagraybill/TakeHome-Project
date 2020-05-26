@@ -1,12 +1,10 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import './reset.scss';
 import './App.scss';
 
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 
 //COMPONENTS
-import NewUser from './components/newUser';
-import ListUsers from './components/listUsers';
 
 import Dashboard from './components/dashboard';
 import Login from './components/login';
@@ -19,6 +17,27 @@ function App() {
   const setAuth = (boolean) => {
     setIsAuthenticated(boolean);
   };
+
+  async function isAuth() {
+    try {
+      const response = await fetch("http://localhost:8000/auth/is-verified", {
+        method: "GET",
+        headers: {
+          token: localStorage.token
+        }
+      });
+
+      const parsedResponse = await response.json();
+      parsedResponse === true ? setIsAuthenticated(true) : setIsAuthenticated(false);
+
+    } catch (err) {
+      console.error(err.message);
+    }
+  }
+
+  useEffect(() => {
+    isAuth();
+  });
 
   return (
     <Fragment>
@@ -48,8 +67,7 @@ function App() {
             </Switch>
         </Router>
 
-        {/* <NewUser />
-        <ListUsers /> */}
+
     </Fragment>
   );
 }
