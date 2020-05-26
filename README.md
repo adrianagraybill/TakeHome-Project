@@ -11,7 +11,7 @@
 ## Resources
 * [Todo App Demo](https://www.youtube.com/watch?v=5vF0FGfa0RQ)
 * [JWT Register/Login Demo](https://www.youtube.com/watch?v=7UQBMb8ZpuE)
-* [Bootstrap 4](https://getbootstrap.com/docs/4.5/getting-started/introduction/) Used this for just one modal, everything else was designed and styled on my own to be reactive and have a simple, easy to use interface.
+* [Bootstrap 4](https://getbootstrap.com/docs/4.5/getting-started/introduction/)  (Used this for just one modal, everything else was designed and styled on my own to be reactive and have a simple, easy to use interface.)
 * [Migration Docs](https://salsita.github.io/node-pg-migrate/#/)
 * [PSQL Command CheatSheet](https://gist.github.com/Kartones/dd3ff5ec5ea238d4c546)
 * [Postman](https://www.postman.com/)
@@ -77,5 +77,7 @@ app.delete('/users/:id', async(req, res) => {
 
 ## App Screenshots
 ![Register Page](https://github.com/adrianagraybill/TakeHome-Project/blob/master/client/public/imgs/register.png)
+---
 ![Login Page](https://github.com/adrianagraybill/TakeHome-Project/blob/master/client/public/imgs/login.png)
+---
 ![Dashboard Page](https://github.com/adrianagraybill/TakeHome-Project/blob/master/client/public/imgs/dashboard.png)
