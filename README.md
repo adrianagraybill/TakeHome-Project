@@ -11,7 +11,8 @@
 ## Resources
 * [Todo App Demo](https://www.youtube.com/watch?v=5vF0FGfa0RQ)
 * [JWT Register/Login Demo](https://www.youtube.com/watch?v=7UQBMb8ZpuE)
-* [Bootstrap 4](https://getbootstrap.com/docs/4.5/getting-started/introduction/)  (Used this for just one modal, everything else was designed and styled on my own to be reactive and have a simple, easy to use interface.)
+* [Bootstrap 4](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
+(Used this for just one modal, everything else was designed and styled on my own to be reactive and have a simple, easy to use interface.)
 * [Migration Docs](https://salsita.github.io/node-pg-migrate/#/)
 * [PSQL Command CheatSheet](https://gist.github.com/Kartones/dd3ff5ec5ea238d4c546)
 * [Postman](https://www.postman.com/)
@@ -42,7 +43,10 @@
 * Server PORT - 8000
 * Client PORT - 3000
 
-* Database - This app runs on your local machine, make sure to have postgres installed on your local machine, here is the [link](https://www.postgresql.org/download/).
+### Database 
+* This app runs on your local machine, make sure to have postgres installed on your local machine, here is the [link](https://www.postgresql.org/download/). 
+
+* Follow database.sql in this repo schema to create database and correct tables on your local machine. Futher instructions [here](https://www.postgresql.org/docs/9.1/tutorial-createdb.html) 
 
 ## Running the Server
 * On your command line cd into the root of the server folder, then type ```nodemon``` to start the server and for it to stay running.
