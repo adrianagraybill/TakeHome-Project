@@ -13,7 +13,7 @@ router.post("/register", validInfo , async (req, res) => {
     
     const account = await pool.query("SELECT * FROM accounts WHERE user_email = $1", [user_email]);
       if (account.rows.length !== 0) {
-        return res.status(401).json('Account already exists');
+        return res.status(401).json('An account with that email already exists.');
       }
 
     const saltRounds = 10;
@@ -34,11 +34,11 @@ router.post("/login", validInfo , async (req, res) => {
     const { user_email, user_password } = req.body;
     const account = await pool.query("SELECT * FROM accounts WHERE user_email = $1", [user_email])
       if (account.rows.length === 0) {
-        return res.status(401).json('Email or password is incorrect');
+        return res.status(401).json('Email or password is incorrect.');
       }
     const validPassword = await bcrypt.compare(user_password, account.rows[0].user_password);
       if(!validPassword) {
-        return res.status(401).json('Email or password is incorrect');
+        return res.status(401).json('Email or password is incorrect.');
       }
     const token = jwtGenerator(account.rows[0].user_id);
     res.json({ token });
