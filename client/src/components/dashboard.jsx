@@ -1,4 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
+import { toast } from "react-toastify";
 import './dashboard.scss';
 
 //COMPONENTS
@@ -30,6 +31,7 @@ const Dashboard = ({ setAuth }) => {
     e.preventDefault();
     localStorage.removeItem("token");
     setAuth(false);
+    toast.success("Logged Out");
   }
 
   useEffect(() => {

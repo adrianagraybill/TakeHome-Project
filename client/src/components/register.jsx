@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { toast } from "react-toastify";
 import './register.scss';
 
 const Register = ({ setAuth }) => {
@@ -30,9 +31,14 @@ const Register = ({ setAuth }) => {
       });
       const parsedResponse = await response.json();
       
-      localStorage.setItem("token", parsedResponse.token);
-
-      setAuth(true);
+      if (parsedResponse.token) {
+        localStorage.setItem("token", parsedResponse.token);
+        setAuth(true);
+        toast.success("Account created successfully!");
+      } else {
+        setAuth(false);
+        toast.error(parsedResponse);
+      }
     } catch (err) {
       console.error(err.message);
     }
