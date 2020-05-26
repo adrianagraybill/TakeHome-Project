@@ -2,6 +2,9 @@ import React, { Fragment, useState, useEffect } from 'react';
 import './reset.scss';
 import './App.scss';
 
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 
 //COMPONENTS
@@ -9,6 +12,8 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-d
 import Dashboard from './components/dashboard';
 import Login from './components/login';
 import Register from './components/register';
+
+toast.configure();
 
 function App() {
 
@@ -28,6 +33,7 @@ function App() {
       });
 
       const parsedResponse = await response.json();
+      console.log(parsedResponse);
       parsedResponse === true ? setIsAuthenticated(true) : setIsAuthenticated(false);
 
     } catch (err) {

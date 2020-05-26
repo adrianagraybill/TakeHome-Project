@@ -12,11 +12,11 @@ module.exports = (req, res, next) => {
     if (req.path === "/register") {
       // checking for empty values
       if (![user_name, user_email, user_password].every(Boolean)) {
-        return res.status(401).send("Missing Information");
+        return res.status(401).json("Missing Information");
       } 
       // checking for an invalid email
       else if (!validateEmail(user_email)) {
-        return res.status(401).send("Invalid Email");
+        return res.status(401).json("Invalid Email");
       }
     }
   
@@ -24,11 +24,11 @@ module.exports = (req, res, next) => {
     if (req.path === "/login") {
       // checking for empty values
       if (![user_email, user_password].every(Boolean)) {
-        return res.status(401).send("Missing Information");
+        return res.status(401).json("Missing Information");
       } 
       // checking for an invalid email
       else if (!validateEmail(user_email)) {
-        return res.status(401).send("Invalid Email");
+        return res.status(401).json("Invalid Email");
       }
     }
 
