@@ -52,8 +52,6 @@
 
 ## Routes
 ```js
-// ROUTES
-
 // Register and login
 app.use("/auth", require("./routes/jwtAuth.js"));
 
@@ -78,6 +76,6 @@ app.delete('/users/:id', async(req, res) => {
 ```
 
 ## App Screenshots
-![Register Page]('./client/public/imgs/register.png')
-![Login Page]('./client/public/imgs/login.png')
-![Dashboard Page]('./client/public/imgs/dashboard.png')
+![UML: Register Page]('./client/public/imgs/register.png')
+![UML: Login Page]('./client/public/imgs/login.png')
+![UML: Dashboard Page]('./client/public/imgs/dashboard.png')
