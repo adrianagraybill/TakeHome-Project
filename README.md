@@ -76,6 +76,6 @@ app.delete('/users/:id', async(req, res) => {
 ```
 
 ## App Screenshots
-![UML: Register Page]('./client/public/imgs/register.png')
-![UML: Login Page]('./client/public/imgs/login.png')
-![UML: Dashboard Page]('./client/public/imgs/dashboard.png')
+![UML: Register Page]('https://github.com/adrianagraybill/TakeHome-Project/blob/master/client/public/imgs/register.png')
+![UML: Login Page]('https://github.com/adrianagraybill/TakeHome-Project/blob/master/client/public/imgs/login.png')
+![UML: Dashboard Page]('https://github.com/adrianagraybill/TakeHome-Project/blob/master/client/public/imgs/dashboard.png')
