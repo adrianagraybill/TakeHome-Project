@@ -9,10 +9,10 @@ router.get("/", authorization, async (req, res) => {
     // req.accounts has the payload
     // pulls just user_name from token
     const account = await pool.query("SELECT user_name FROM accounts WHERE user_id = $1", [req.account.id]);
-    res.send(account.rows[0]);
+    res.json(account.rows[0]);
   } catch (err) {
     console.error(err.message);
-    res.status(500).send("Server Error");
+    res.status(500).json("Server Error");
   }
 });
 
