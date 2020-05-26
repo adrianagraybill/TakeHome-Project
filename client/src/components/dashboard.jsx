@@ -31,7 +31,7 @@ const Dashboard = ({ setAuth }) => {
     e.preventDefault();
     localStorage.removeItem("token");
     setAuth(false);
-    toast.success("Logged Out");
+    toast.success(`${name} Logged Off`);
   }
 
   useEffect(() => {
