@@ -1,4 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
+import './dashboard.scss';
 
 //COMPONENTS
 import NewUser from './newUser';
