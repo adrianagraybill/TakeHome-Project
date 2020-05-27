@@ -1,4 +1,5 @@
-# TakeHome-Project
+# Sample Project
+
 #### Author: Adriana Graybill
 
 ### Description
